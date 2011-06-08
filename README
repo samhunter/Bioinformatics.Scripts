@@ -1,1 +1,6 @@
 Eventually this README will contain a list of all the python scripts included in this repo, as well as a short description of their function.
+
+kmers2.py:
+	Counts kmers in sequences, it expects a basic-fasta format, one line per read, and skips lines starting with ">".  It also combines forward, and reverse complement kmers.
+	to run: kmers2.py -i <input.fasta> -o <id> -k <kmer size>
+	It will create a file named <id>-out-<k>mers.csv
