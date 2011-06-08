@@ -74,13 +74,13 @@ for line in inf:
     rcounts = {}
     j+=1
     if(j % 1000 == 0):
-      print("record %s, time/1000 %s" % (j, time.time() -t))
+      print("record %s, %s records per second" % (j, 1000/(time.time() -t))
       t = time.time()
     #if(j > 2): break #uncomment for testing
 
 endt = time.time()
 
-print("Processed %s reads in %s time" % (reads,  endt-startt))
+print("Processed %s reads in %s seconds" % (reads,  endt-startt))
 
 l = []
 #Generate a list of sorted keys
