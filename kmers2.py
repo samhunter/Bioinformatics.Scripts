@@ -74,7 +74,7 @@ for line in inf:
     rcounts = {}
     j+=1
     if(j % 1000 == 0):
-      print("record %s, %s records per second" % (j, 1000/(time.time() -t))
+      print("record %s, %s records per second" % (j, 1000/(time.time() -t)))
       t = time.time()
     #if(j > 2): break #uncomment for testing
 
