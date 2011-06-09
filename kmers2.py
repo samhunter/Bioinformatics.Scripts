@@ -80,7 +80,7 @@ for line in inf:
 
 endt = time.time()
 
-print("Processed %s reads in %s seconds" % (reads,  endt-startt))
+print("Processed %s reads in %s seconds, %s reads per second" % (reads,  endt-startt, reads/(endt-startt)))
 
 l = []
 #Generate a list of sorted keys

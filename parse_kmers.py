@@ -126,7 +126,7 @@ l = []
 #Generate a list of sorted keys
 print("Sorting unique1 results....\n")
 for kmer in unique1k.keys():
-   l.append([kmer, unique1k[kmer][3]])
+   l.append([kmer, float(unique1k[kmer][3])])
 
 l = sorted(l,  key=lambda counts: counts[1],  reverse=True)
 
@@ -140,13 +140,12 @@ for r in l:
 
 outf_unique1.close()
 
-
 # Write out unique2k
 l = []
 #Generate a list of sorted keys
 print("Sorting unique2 results....\n")
 for kmer in unique2k.keys():
-   l.append([kmer, unique2k[kmer][3]])
+   l.append([kmer, float(unique2k[kmer][3])])
 
 l = sorted(l,  key=lambda counts: counts[1],  reverse=True)
 

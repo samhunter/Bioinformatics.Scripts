@@ -10,3 +10,5 @@ def read_fasta_to_dictionary(filename=""):
 def reverse_complement(seq):
    from string import maketrans
    return(seq.translate(maketrans('ATCGatcg', 'TAGCtagc')))[::-1]
+
+
