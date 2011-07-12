@@ -226,6 +226,7 @@ for k in range(options.start, options.end+1):
    log("Finished processing files for k=%s" % k)
    log("%s unique: %s, %s unique: %s, common: %s" % (options.groups[0], len(uk_g1), options.groups[1], len(uk_g2), len(ck)))
    results_outf.write("%s,%s,%s,%s\n" % (k,len(uk_g1), len(uk_g2), len(ck)))
+   results_outf.flush()
    if(options.verbose):
       log("Vebose mode set, writing detailed results files for k=%s" % k)
       # ####### group 1 #########
