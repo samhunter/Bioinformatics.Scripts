@@ -116,7 +116,7 @@ for k in range(options.start, options.end+1):
             rcounts = {}
             reads += 1; freads +=1
             if(reads % 100000 == 0):
-               txt = "File:%s, read: %s, total reads:%s, reads/sec:%s" %(file, freads, reads, reads/(ftime - time.time()) )
+               txt = "File:%s, read: %s, total reads:%s, reads/sec:%s" %(file, freads, reads, reads/(time.time() - ftime) )
                log(txt)
             i = 0
             #for i in range(len(line) - k +1): #add one to ensure analysis of full line
@@ -168,7 +168,7 @@ for k in range(options.start, options.end+1):
             rcounts = {}
             reads += 1; freads +=1
             if(reads % 100000 == 0):
-               txt = "File:%s, read: %s, total reads:%s, reads/sec:%s" % (file, freads, reads, reads/(ftime - time.time()))
+               txt = "File:%s, read: %s, total reads:%s, reads/sec:%s" % (file, freads, reads, reads/(time.time() - ftime))
                txt = txt + ("\n  %s unique: %s, %s unique: %s, common: %s" % (options.groups[0], len(uk_g1), options.groups[1], len(uk_g2), len(ck)))
                log(txt)
             i=0
